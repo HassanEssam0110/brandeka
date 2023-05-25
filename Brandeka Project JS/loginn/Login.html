@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <!-- link file css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="contanier">
+        <div class="login">
+            <img class="user" src="user.jpg" alt="">
+            <h1>Welcome Back!</h1>
+            <form action="../index.html">
+                <label for="email">Email</label>
+                <input type="email" placeholder="Enter email here" name="email" id="email" required>
+                <label for="password">Password</label>
+                <input type="password" placeholder=" Enter your password " name="password" id="password" required>
+                <button onclick="checkCredentials(event)">Login</button>
+            </form>
+            <div class="bottom-div">
+                <div class="line-or">
+                    <span>OR</span>
+                </div>
+
+                <div class="btns">
+                    <a href="#" class="btn"><img class="fb" src="facebook.png" alt=""></a>
+                    <a href="#" class="btn"><img class="google" src="google.png" alt=""></a>
+                </div>
+                <p class="signup">Don't have account? <a href="register.html">Signup Now</a></p>
+            </div>
+        </div>
+    </div>
+    <script>
+        function checkCredentials() {
+
+            var emailField = document.getElementById("email");
+            var passwordField = document.getElementById("password");
+
+            var emailValue = emailField.value;
+            var passwordValue = passwordField.value;
+
+            var storedEmail = localStorage.getItem("email");
+            var storedPassword = localStorage.getItem("password");
+
+            if (emailValue === storedEmail && passwordValue === storedPassword) {
+                localStorage.setItem('log', true);
+                alert("تم تسجيل الدخول بنجاح!");
+
+            } else {
+                alert("خطأ في معلومات تسجيل الدخول!");
+                emailValue = "";
+                passwordValue = "";
+                emailValue.focus();
+                event.preventDefault();
+                localStorage.setItem('log', false);
+            }
+        }
+    </script>
+
+</body>
+
+</html>

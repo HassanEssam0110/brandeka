@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <!-- link file css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="contanier">
+        <div class="login">
+            <img class="user" src="user.jpg" alt="">
+            <form action="../index.html">
+                <label for="fname">First Name</label>
+                <input type="text" placeholder="Enter fname here" name="fname" id="fname" required>
+                <label for="fname">Last Name</label>
+                <input type="text" placeholder="Enter Lname here" name="Lname" id="Lname" required>
+                <label for="email">Email</label>
+                <input type="email" placeholder="Enter email here" name="email" id="email" required>
+                <label for="password">Password</label>
+                <input type="password" placeholder=" Enter your password " name="password" id="password" required>
+                <br> <br>
+                <button id="signupBtn" onclick="saveEmail()">Sign Up</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        function saveEmail() {
+            var fnameField = document.getElementById("fname");
+            var fnameValue = fnameField.value;
+            localStorage.setItem("fname", fnameValue);
+
+            var LnameField = document.getElementById("Lname");
+            var LnameValue = LnameField.value;
+            localStorage.setItem("Lname", LnameValue);
+
+            var emailField = document.getElementById("email");
+            var emailValue = emailField.value;
+            localStorage.setItem("email", emailValue);
+
+            var passwordField = document.getElementById("password");
+            var passwordValue = passwordField.value;
+            localStorage.setItem("password", passwordValue);
+
+
+
+            if (fnameValue != " " && LnameValue != " " && emailValue != " " && passwordValue != "") {
+                localStorage.setItem('log', true)
+                localStorage.setItem('coins', '3');
+            } else {
+                localStorage.setItem('log', false)
+                localStorage.setItem('coins', '0');
+
+            }
+        }
+    </script>
+</body>
+
+</html>

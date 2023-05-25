@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brandeka - Your One-Stop Ecommerce Destination</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <!-- Jquery confirm -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
+</head>
+
+<body>
+    <div class="acount-access">
+        <ul class="accoutn-support">
+            <li><a id="login" href="loginn/Login.html">Login</a></li>
+            <li class="space">|</li>
+            <li><a id="register" href="loginn/register.html">Register </a></li>
+            <li class="space">|</li>
+            <li id="support"><a class="btn-email"
+                    href="mailto:hassanessam776@gmail.com?subject=Support Me Brandeka!">Support</a></li>
+        </ul>
+
+    </div>
+    <header class="page-header">
+        <div class="nav-bar">
+            <div class="nav-cont">
+                <div class="logo">
+                    <a href="#">
+                        <img src="images/logo.png" alt="">
+                    </a>
+                </div>
+                <div class="links">
+                    <ul class="nav-minu">
+                        <li class="nav-item"><a href="#">Home</a></li>
+                        <li class="nav-item"><a id="allProudect" href="#shop">Shop</a></li>
+                        <li class="nav-item"><a href="#about">About</a></li>
+                    </ul>
+                    <div class="dropdown">
+                        <div id="dropdown-menu" class="dropdown-menu">categorries <i
+                                class="fa-solid fa-chevron-down"></i></div>
+                        <div id="dropdown-content" class="dropdown-content hide-dropdown-menu">
+                            <ul id="categorries" class="nav-categorries">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nav-bar user">
+            <div id="btnOpen" class="cart-count">
+                <i class="icon-cart fa-solid fa-cart-shopping" title="Cart"></i>
+                <span id="itemsNum" class="counter">0</span>
+            </div>
+            <div class="user-log">
+                <i id="logOut" class="icon-user fa-solid fa-user" title="Log out"></i>
+                <span id="userWelcome" class="user-welcome"></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- start cart -->
+    <div id="cart" class="cart-page">
+        <div class="cart-container">
+            <h2 class="cart-title">Cart Items</h2>
+            <table>
+                <thead>
+                    <th>Product</th>
+                    <th>img</th>
+                    <th>Price</th>
+                    <th>Remove</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+                    <!-- <tr id="row-table">
+                        <td class="Product-table">
+                            <p>product1ddddddddddd</p>
+                        </td>
+                        <td class="image-table">
+                            <img id="img" class="img-table" src="images/product-6.jpg" alt="Product 1" />
+                        </td>
+                        <td class="price">$19.99</td>
+                        <td class="qut"><input onchange="alert('test')" type="number" value="1" min="1" max="10" /></td>
+                        <td>$19.99</td>
+                    </tr> -->
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td class="totalText" colspan="2">Total:</td>
+                        <td class="totalNumber" id="totalCell"></td>
+                    </tr>
+                </tfoot>
+            </table>
+
+            <div class="cartBtns">
+                <span id="btnClose" class="continue-shopping"><i class="cart-icon-link fa-solid fa-shop"></i>Continue
+                    Shopping</span>
+                <span id="Checkout" class="checkout"><i
+                        class="cart-icon-link fa-solid fa-bag-shopping"></i>Checkout</span>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Start main -->
+    <main>
+        <!--Start hero section -->
+        <section class="hero">
+            <div class="left-hero">
+                <img class="left-hero-img" src="images/1.jpg" alt="">
+                <h2 class="hero-title">skincare</h2>
+                <a id="skincare" class="btn-shop" href="#shop">Shop Now</a>
+            </div>
+            <div class="right-hero">
+                <div class="top-right-hero">
+                    <img class="top-right-hero-img" src="images/2.jpg" alt="">
+                    <h2 class="hero-title">laptops</h2>
+                    <a id="laptops" class="btn-shop" href="#shop">Shop Now</a>
+                </div>
+                <div class="bottom-right-hero">
+                    <img class="bottom-right-hero-img" src="images/3.jpg" alt="">
+                    <h2 class="hero-title">fragrances</h2>
+                    <a id="fragrances" class="btn-shop" href="#shop">Shop Now</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Start -->
+        <section class="Featured  pt-5">
+            <div class="feat-cont row px-xl-5 pb-3">
+
+                <div class="feat-box col-lg-3 col-md-6 col-sm-12 pb-1">
+                    <div class="feat-row d-flex align-items-center bg-light mb-4" style="padding: 30px;">
+                        <i class="feat-icon fa fa-check text-primary m-0 mr-3"></i>
+                        <h5 class="font-weight-semi-bold m-0">Quality Product</h5>
+                    </div>
+                </div>
+
+                <div class="feat-box col-lg-3 col-md-6 col-sm-12 pb-1">
+                    <div class="feat-row d-flex align-items-center bg-light mb-4" style="padding: 30px;">
+                        <i class="feat-icon fa fa-shipping-fast text-primary m-0 mr-2"></i>
+                        <h5 class="font-weight-semi-bold m-0">Free Shipping</h5>
+                    </div>
+                </div>
+
+                <div class="feat-box col-lg-3 col-md-6 col-sm-12 pb-1">
+                    <div class="feat-row d-flex align-items-center bg-light mb-4" style="padding: 30px;">
+                        <i class="feat-icon fas fa-exchange-alt text-primary m-0 mr-3"></i>
+                        <h5 class="font-weight-semi-bold m-0">14-Day Return</h5>
+                    </div>
+                </div>
+
+                <div class="feat-box col-lg-3 col-md-6 col-sm-12 pb-1">
+                    <div class="feat-row d-flex align-items-center bg-light mb-4" style="padding: 30px;">
+                        <i class="feat-icon fa fa-phone-volume text-primary m-0 mr-3"></i>
+                        <h5 class=" m-0">24/7 Support</h5>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- Featured End -->
+
+
+
+        <!-- Start shop -->
+        <section id="shop" class="shop">
+            <h2 class="shop-title">Shop</h2>
+            <div id="shop-cont" class="shop-container">
+                <!-- <div class="prod-box">
+                    <div class="img-box">
+                        <img src="images/product-6.jpg" alt="">
+                    </div>
+                    <div class="prod-info">
+                        <h4 class="prod-title">test</h4>
+                        <p class="prod-description">Lorem ipsum dolor sit amet.</p>
+                        <div class="prod-details">
+                            <span class="prod-category">Smartmobile</span>
+                            <span class="prod-brand">apple</span>
+                        </div>
+                        <div class="prod-buy">
+                            <span class="prod-price">100$</span>
+                            <button class="prod-add-cart"><i class="icon-cart fa-solid fa-cart-shopping"></i></button>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </section>
+
+
+        <!-- Start video -->
+        <section class="video">
+            <video autoplay muted loop>
+                <source src="images/game-section.mp4" type="video/mp4">
+            </video>
+            <div class="text">
+                <h2>play and win coupons</h2>
+                <p>Jack Sparrow Game</p>
+                <button id="gameNow">Play Now</button>
+            </div>
+        </section>
+        <!-- End video -->
+
+        <!-- Start hero section -->
+        <section class="hero">
+            <div class="right-hero">
+                <div class="top-right-hero">
+                    <img class="top-right-hero-img" src="images/4.jpg" alt="">
+                    <h2 class="hero-title">Groceries</h2>
+                    <a id="groceries" class="btn-shop" href="#shop">Shop Now</a>
+                </div>
+                <div class="bottom-right-hero">
+                    <img class="bottom-right-hero-img" src="images/6.jpg" alt="">
+                    <h2 class="hero-title">shop all</h2>
+                    <a id="all" class="btn-shop" href="#shop">Shop Now</a>
+                </div>
+            </div>
+            <div class="left-hero">
+                <img class="left-hero-img" src="images/5.jpg" alt="">
+                <h2 class="hero-title">Decoration</h2>
+                <a id="home-decoration" class="btn-shop" href="#shop">Shop Now</a>
+            </div>
+        </section>
+
+        <section id="about" class="shop">
+            <h2 class="shop-title">About</h2>
+            <div class="aboutCont">
+                <div class="aboutBox">
+                    <div class="aboutImg">
+                        <img src="images/logo2_light.png" alt="">
+                    </div>
+                    <div class="aboutInfo">
+                        <h2 class="aboutInfoTitle">Our Story</h2>
+                        <p class="aboutInfoPara">Brandeka was founded in 2023 with the goal of providing customers with
+                            a
+                            convenient and
+                            hassle-free
+                            online shopping experience. We understand the challenges of shopping online, such as
+                            unreliable
+                            vendors,
+                            hidden fees, and poor customer service. That's why we strive to offer only the best products
+                            and
+                            services to our customers, while maintaining a high level of transparency and honesty.</p>
+                    </div>
+                </div>
+
+
+                <div class="aboutBox">
+
+                    <div class="aboutInfo">
+                        <h2 class="aboutInfoTitle">Our Mission</h2>
+                        <p class="aboutInfoPara">At Brandeka, our mission is to empower people to live their best lives
+                            by
+                            providing access to
+                            high-quality products at affordable prices. We believe that everyone deserves to have access
+                            to
+                            the
+                            products they need to live a happy and healthy life, and we are committed to making that a
+                            reality
+                            for
+                            our customers.</p>
+                    </div>
+                    <div class="aboutImg">
+                        <img src="images/logo2.png" alt="">
+                    </div>
+                </div>
+
+                <div class="aboutBox">
+                    <div class="aboutImg">
+                        <img src="images/logo2_light.png" alt="">
+                    </div>
+                    <div class="aboutInfo">
+                        <h2 class="aboutInfoTitle">Our Team</h2>
+                        <p class="aboutInfoPara">Our team is made up of dedicated professionals with years of experience
+                            in
+                            ecommerce, marketing,
+                            and
+                            customer service. We are passionate about helping our customers find the perfect products
+                            for
+                            their
+                            needs, and we are always available to answer any questions or concerns you may have. Whether
+                            you
+                            need
+                            help placing an order, tracking a shipment, or just have a general question, our team is
+                            here to
+                            assist
+                            you every step of the way.</p>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Brandeka. All rights reserved.</p>
+    </footer>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        var fnameValue = localStorage.getItem("fname");
+        var LnameValue = localStorage.getItem("Lname");
+        var emailElement = document.getElementById("userWelcome");
+        var log = localStorage.getItem("log");
+        if (log == "true" && fnameValue != " ") {
+            emailElement.innerText = `Hi, ${fnameValue} `;
+        }
+
+    </script>
+</body>
+
+</html>

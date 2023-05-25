@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slot Machine game </title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Google fonts  Alkatra & Delicious Handrawn & Roboto-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alkatra:wght@400;500;600;700&family=Delicious+Handrawn&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <div id="message-container" class="message-container hide-message-container">
+        <div class="message">
+            <i id="closeMessage" title="close" class="fa-solid fa-xmark closeIcon"> </i>
+            <h2 class="number-message">Yor number: <span id="number-user"></span></h2>
+            <h3 id="win" class="result-game hide-message">winner! code: <span id="code" class="result-code">---</span>
+            </h3>
+            <h3 id="lose" class="result-game hide-message">loser!</h3>
+        </div>
+    </div>
+
+    <!-- <header>
+        <a href="http://"><img src="images/" alt="">Logo</a>
+    </header> -->
+
+
+    <main>
+        <a href="../index.html"><img width="60px" src="images/2.png" alt="logo"></a>
+        <h1 class="title-game" title="How To play">Play Slot!</h1>
+        <section class="game-body">
+            <span id="item1" class="slot-number">?</span>
+            <span id="item2" class="slot-number">?</span>
+            <span id="item3" class="slot-number">?</span>
+
+            <div>
+                <i id="load" class="fa-solid fa-rotate icon"></i>
+            </div>
+            <div>
+                <button id="spin" class="btn-play btn-display">spin</button>
+            </div>
+
+
+            <div class="coins-box">
+                <i id="moreCoins" class="fa-solid fa-plus coin-icon" onclick="getMoreCoins()"></i>
+                <img class="coin-img" src="images/coin.png" alt="coin">
+                <span id="coin" class="coin-count">-</span>
+            </div>
+
+
+
+        </section>
+
+        <audio id="sound">
+            <source src="assat/html_slot-machine-game_boing.mp3" type="audio/mpeg">
+        </audio>
+
+        <audio id="winnerSound">
+            <source src="assat/winner.mp3" type="">
+        </audio>
+        <audio id="loserSound">
+            <source src="assat/gameOver.mp3" type="">
+        </audio>
+    </main>
+
+
+    <!-- soundes  -->
+    <audio id="trak" src="assat/Pirate.mp3" autoplay loop></audio>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

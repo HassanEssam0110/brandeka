@@ -1,0 +1,215 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Alkatra", cursive;
+  /* font-family: "Delicious Handrawn", cursive; */
+  /* font-family: "Roboto", sans-serif; */
+}
+body {
+  /* font-family: "Delicious Handrawn", "Alkatra", "Roboto", "Arial"; */
+  background-color: #000022;
+  background: url(../images/bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+main {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  padding: 15px 20px;
+  border: 1px solid #333;
+  border-radius: 7px;
+  font-family: "Alkatra", cursive;
+  background-color: #00002228;
+  backdrop-filter: blur(3px);
+  /* z-index: 2; */
+  box-shadow: 0 0 15px #000022;
+}
+.title-game {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 70px;
+  color: #fff;
+  cursor: pointer;
+  text-shadow: 2px 2px #000022;
+}
+
+/* coins*/
+.coins-box {
+  display: inline-block;
+  position: absolute;
+  bottom: 10px;
+  right: 60px;
+}
+.coin-img {
+  width: 50px;
+  display: inline-block;
+  border-radius: 30px;
+  box-shadow: 8px 8px 15px #000;
+}
+.coin-icon {
+  font-size: 20px;
+  color: #e91e63;
+  display: inline-block;
+  cursor: pointer;
+}
+.coin-count {
+  display: inline-block;
+  font-size: 30px;
+  position: absolute;
+  top: -15px;
+  right: -38px;
+  color: #f1f1f1;
+}
+
+/*game box*/
+.game-body {
+  width: 80%;
+  margin: 15px auto;
+  padding: 15px;
+  /* border: 1px solid #777; */
+  text-align: center;
+}
+.slot-number {
+  font-size: 70px;
+  margin: 5px 20px;
+  color: #e91e63;
+}
+
+.btn-play {
+  width: 90px;
+  padding: 5px 10px;
+  margin: 15px auto 30px;
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  cursor: pointer;
+  border: none;
+  background: #ff0099;
+  background-image: linear-gradient(45deg, #3023ae 0%, #ff0099 100%);
+  color: #fff;
+  font-size: 20px;
+  font-family: "Alkatra", cursive;
+}
+.btn-display {
+  /* cursor: no-drop; */
+  display: none;
+}
+.icon {
+  display: none;
+  /* display: block; */
+
+  width: 90px;
+  /* height: 50px; */
+  margin: 30px auto 15px;
+  font-size: 30px;
+  color: #fff;
+  animation: load 1s infinite linear;
+  transition: 0.3s;
+}
+
+.show-icon {
+  display: block;
+  /* opacity: 1; */
+}
+
+@keyframes load {
+  0%,
+  100% {
+    /* opacity: 0; */
+    transform: rotate(0deg);
+  }
+
+  50% {
+    /* opacity: 1; */
+    transform: rotate(360deg);
+  }
+}
+
+.message-container {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  transition: 0.3s;
+}
+.hide-message-container {
+  display: none;
+}
+
+.closeIcon {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: #f44336;
+  font-size: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+  /* animation: close 2s linear infinite; */
+  /* width: 30px;
+  height: 30px; */
+  /* border: 1px solid #777;
+  background-color: #000; */
+  /* border-radius: 5px; */
+  /* transform-origin: center; */
+}
+.closeIcon:hover {
+  transform: rotate(180deg);
+}
+@keyframes close {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+.message {
+  background-color: #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 250px;
+  border-radius: 7px;
+  /* animation: close 2s linear infinite; */
+}
+.hide-message {
+  display: none;
+}
+.number-message {
+  color: #000022;
+  text-align: center;
+  /* margin: 20px auto 15px; */
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.result-game {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  color: #2196f3;
+}
+.result-code {
+  color: #f44336;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  display: block;
+  font-size: 25px;
+}
